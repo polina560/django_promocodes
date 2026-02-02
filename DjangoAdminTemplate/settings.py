@@ -50,8 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'catalog.apps.CatalogConfig',
     'account.apps.AccountConfig',
+    'catalog.apps.CatalogConfig',
     'promocode.apps.PromocodeConfig',
 ]
 

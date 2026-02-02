@@ -17,11 +17,17 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('catalog/', include('catalog.urls')),
+                  path('account/', include('account.urls')),
+                  path('promcode/', include('promocode.urls')),
                   path('', RedirectView.as_view(url='/catalog/', permanent=True)),
+
+                  path('admin/auth/user/', lambda request: redirect('/admin/account/customuser/')),
+                  path('admin/auth/user/add/', lambda request: redirect('/admin/account/customuser/add/')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

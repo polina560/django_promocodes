@@ -17,14 +17,8 @@ class CustomUserAdmin(UserAdmin):
     inlines = (UserProfileInline,)
 
     # Опционально: добавить поля профиля в список отображения пользователей
-    list_display = UserAdmin.list_display + ('get_avatar',)
+    list_display = UserAdmin.list_display
 
-    def get_avatar(self, obj):
-        if hasattr(obj, 'profile'):
-            return obj.profile.avatar
-        return None
-
-    get_avatar.short_description = 'Аватар'
 
 
 # Перерегистрируем модель User

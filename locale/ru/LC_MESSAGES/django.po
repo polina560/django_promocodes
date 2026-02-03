@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Модели
+msgid "Product"
+msgstr "Продукт"
+
+msgid "Products"
+msgstr "Продукты"
+
+msgid "Main Model"
+msgstr "Основная модель"
+
+msgid "Main Models"
+msgstr "Основные модели"
+
+msgid "Test Model"
+msgstr "Тестовая модель"
+
+msgid "Test Models"
+msgstr "Тестовые модели"
+
+# Поля
+msgid "Name"
+msgstr "Название"
+
+msgid "Promocodes"
+msgstr "Промокоды"
+
+msgid "Promocode"
+msgstr "Промокод"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Created at"
+msgstr "Дата создания"
+
+msgid "Updated at"
+msgstr "Дата изменения"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Number"
+msgstr "Число"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Image"
+msgstr "Изображеение"
+
+msgid "File"
+msgstr "Файл"
+
+

@@ -1,31 +1,45 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
 class Promocode(models.Model):
-    promocode = models.CharField()
-    description = models.CharField()
+    promocode = models.CharField( verbose_name =_('Promocode'), max_length=100)
+    description = models.CharField(verbose_name =_('Description'))
+
+    class Meta:
+        verbose_name = _('Promocode')  # Название в единственном числе
+        verbose_name_plural = _('Promocodes')  # Название во множественном числе
+
 
     def __str__(self):
         return f'{self.promocode}'
 
 class MainModel(models.Model):
-    title = models.CharField()
+    title = models.CharField(verbose_name =_('Name'),  max_length=100)
     system = models.CharField()
-    created_at = models.DateField()
-    updated_at = models.DateField()
+    created_at = models.DateField(verbose_name =_('Created at'))
+    updated_at = models.DateField(verbose_name =_('Updated at'))
+
+    class Meta:
+        verbose_name = _('Main Model')  # Название в единственном числе
+        verbose_name_plural = _('Main Model')  # Название во множественном числе
 
     def __str__(self):
         return f'{self.title}'
 
 class TestModel (models.Model):
-    text = models.TextField()
-    number = models.IntegerField()
-    date = models.DateField()
-    image = models.ImageField()
-    file = models.FileField()
+    text = models.TextField(verbose_name =_('Text'))
+    number = models.IntegerField(verbose_name =_('Number'))
+    date = models.DateField(verbose_name =_('Date'))
+    image = models.ImageField(verbose_name =_('Image'))
+    file = models.FileField(verbose_name =_('File'))
 
     main = models.ForeignKey(MainModel, on_delete=models.CASCADE, null=True)
+
+    class Meta:
+        verbose_name = _('Test Model')  # Название в единственном числе
+        verbose_name_plural = _('Test Model')  # Название во множественном числе
 
     def __str__(self):
         return f'{self.text}'

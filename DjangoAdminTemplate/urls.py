@@ -30,4 +30,6 @@ urlpatterns = [
 
                   path('admin/auth/user/', lambda request: redirect('/admin/account/customuser/')),
                   path('admin/auth/user/add/', lambda request: redirect('/admin/account/customuser/add/')),
+
+                  # path('ckeditor/', include('ckeditor_uploader.urls')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -47,9 +47,20 @@ class MainModelAdmin(admin.ModelAdmin):
     preserve_filters = True
     save_on_top = True
 
-    formfield_overrides = {
-        models.CharField: {"widget": CKEditorWidget(attrs={"size": 60})},
-    }
+    # редактор текста на тектсовых полях
+    # formfield_overrides = {
+    #     models.CharField: {"widget": CKEditorWidget(attrs={"size": 60})},
+    # }
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        # Применяем CKEditor только к полю 'title'
+        form.base_fields['title'].widget = CKEditorWidget()
+        return form
+
+
+    #  поиск по выпадающему списку
+    autocomplete_fields = ["list"]
 
     # def list_title(self, obj):
     #     return obj.list.title
@@ -67,3 +78,7 @@ class PromocodeAdmin(admin.ModelAdmin):
 
     # поля в таблице
     list_display = ("promocode", "description")
+
+    # массовое редактирование
+    list_editable = ("description",)
+    list_display_links = ("promocode",)

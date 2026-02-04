@@ -8,3 +8,4 @@ tzdata==2025.3
 djangorestframework==3.16.1
 django-js-asset==3.1.2
 django-ckeditor==6.7.3
+django-ckeditor-5==0.2.19

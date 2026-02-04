@@ -25,7 +25,7 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('catalog/', include('catalog.urls')),
                   path('account/', include('account.urls')),
-                  path('promcode/', include('promocode.urls')),
+                  path('promocode/', include('promocode.urls')),
                   path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 
                   path('admin/auth/user/', lambda request: redirect('/admin/account/customuser/')),

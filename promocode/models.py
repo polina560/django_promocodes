@@ -49,7 +49,7 @@ class TestModel (models.Model):
     is_active = models.BooleanField(verbose_name =_('Active'), default=True)
 
 
-    main = models.ForeignKey(MainModel, on_delete=models.CASCADE, null=True)
+    main = models.ForeignKey(MainModel, on_delete=models.CASCADE, null=True, related_name='tests')
 
     class Meta:
         verbose_name = _('Test Model')  # Название в единственном числе

@@ -9,3 +9,9 @@ djangorestframework==3.16.1
 django-js-asset==3.1.2
 django-ckeditor==6.7.3
 django-ckeditor-5==0.2.19
+colorama==0.4.6
+iniconfig==2.3.0
+packaging==26.0
+pluggy==1.6.0
+pygments==2.19.2
+pytest==9.0.2

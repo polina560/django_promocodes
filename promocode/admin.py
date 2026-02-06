@@ -43,9 +43,9 @@ class MainModelAdmin(admin.ModelAdmin):
     list_display = ("title", "system", "created_at", "active")
 
     # пагинация
-    list_per_page = 3
-    preserve_filters = True
-    save_on_top = True
+    # list_per_page = 3
+    # preserve_filters = True
+    # save_on_top = True
 
     # редактор текста на тектсовых полях
     # formfield_overrides = {

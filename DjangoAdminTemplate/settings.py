@@ -120,6 +120,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,7 +130,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'catalog.apps.CatalogConfig',
     'promocode.apps.PromocodeConfig',
-    'ckeditor'
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -195,6 +196,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+JAZZMIN_SETTINGS = {
+    # "hide_models": [
+    #     "promocode.promocode",
+    # ],
+    "navigation_expanded": False,
+}
 
 
 # Internationalization

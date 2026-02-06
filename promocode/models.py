@@ -2,6 +2,7 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+
 # Create your models here.
 
 class Promocode(models.Model):
@@ -24,7 +25,8 @@ class ListModel(models.Model):
 
 class MainModel(models.Model):
     title = models.CharField(verbose_name =_('Name'),  max_length=100)
-    system = models.CharField()
+    system = models.CharField(max_length=100)
+
     created_at = models.DateField(verbose_name =_('Created at'), null=True, blank=True)
     updated_at = models.DateField(verbose_name =_('Updated at'), null=True, blank=True)
 
